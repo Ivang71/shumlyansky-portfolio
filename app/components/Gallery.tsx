@@ -10,9 +10,12 @@ import { cdn, slides } from "@/app/consts/slides"
 import { useWindowWidth } from "@/app/hooks"
 import { SlideFooter } from "./SlideFooter"
 
+
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
     const windowWidth = useWindowWidth()
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
     // Retrieve query parameter on mount
     useEffect(() => {
@@ -42,7 +45,7 @@ export const Gallery = () => {
             <div className={s.firstRow}>
                 <Image src={`${cdn}/pics/frame_preview.avif`} alt="" priority width={630} height={630} className='fade-in' onClick={() => openMedia(0)} />
                 <Image src={`${cdn}/pics/ring1_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(1)} />
-                <video width="475" height="475" muted autoPlay loop playsInline webkit-playsinline preload="auto" className='fade-in' onClick={() => openMedia(2)}>
+                <video width="475" height="475" muted autoPlay loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(2)}>
                     <source src={`${cdn}/vids/milk_preview.mp4`} type="video/mp4" />
                 </video>
             </div>
@@ -53,28 +56,28 @@ export const Gallery = () => {
                 <Image src={`${cdn}/pics/ring3_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(5)} />
             </div>
 
-            <video width="1146" height="814" muted loop playsInline webkit-playsinline preload="auto" className={`${s.canVid} fade-in`} onClick={() => openMedia(6)}>
+            <video width="1146" height="814" muted loop playsInline controls={isSafari} preload="auto" className={`${s.canVid} fade-in`} onClick={() => openMedia(6)}>
                 <source src={`${cdn}/vids/can_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.thirdRow}>
-                <video width="313" height="391" muted loop playsInline webkit-playsinline preload="auto" className={`${s.pucksVid} fade-in`} onClick={() => openMedia(7)}>
+                <video width="313" height="391" muted loop playsInline controls={isSafari} preload="auto" className={`${s.pucksVid} fade-in`} onClick={() => openMedia(7)}>
                     <source src={`${cdn}/vids/pucks_preview.mp4`} type="video/mp4" />
                 </video>
-                <video width="552" height="714" muted loop playsInline webkit-playsinline preload="auto" className={`${s.mouseVid} fade-in`} onClick={() => openMedia(8)}>
+                <video width="552" height="714" muted loop playsInline controls={isSafari} preload="auto" className={`${s.mouseVid} fade-in`} onClick={() => openMedia(8)}>
                     <source src={`${cdn}/vids/mouse_preview.mp4`} type="video/mp4" />
                 </video>
-                <video width="313" height="313" muted loop playsInline webkit-playsinline preload="auto" className={`${s.coolinartVid} fade-in`} onClick={() => openMedia(9)}>
+                <video width="313" height="313" muted loop playsInline controls={isSafari} preload="auto" className={`${s.coolinartVid} fade-in`} onClick={() => openMedia(9)}>
                     <source src={`${cdn}/vids/coolinart_preview.mp4`} type="video/mp4" />
                 </video>
             </div>
 
-            <video width="1446" height="606" muted loop playsInline webkit-playsinline preload="auto" className={`${s.joisVid} fade-in`} onClick={() => openMedia(10)}>
+            <video width="1446" height="606" muted loop playsInline controls={isSafari} preload="auto" className={`${s.joisVid} fade-in`} onClick={() => openMedia(10)}>
                 <source src={`${cdn}/vids/jois_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.seventhRow}>
-                <video width="442" height="628" muted loop playsInline webkit-playsinline preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(11)}>
+                <video width="442" height="628" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(11)}>
                     <source src={`${cdn}/vids/burberry_preview.mp4`} type="video/mp4" />
                 </video>
                 <div className={s.burbBlock}>
@@ -85,19 +88,19 @@ export const Gallery = () => {
                 </div>
             </div>
 
-            <video width="1446" height="814" muted loop playsInline webkit-playsinline preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
+            <video width="1446" height="814" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
                 <source src={`${cdn}/vids/camera_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.fifthRow}>
-                <video width="942" height="1177" muted loop playsInline webkit-playsinline preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
+                <video width="942" height="1177" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
                     <source src={`${cdn}/vids/phone.mp4`} type="video/mp4" />
                 </video>
                 <Image src={`${cdn}/pics/flower_preview.avif`} alt="" priority={false} width={650} height={751} loading='lazy' className={`${s.flower} fade-in`} onClick={() => openMedia(18)} />
                 <Image src={`${cdn}/pics/chakchak_preview.avif`} alt="" priority={false} width={650} height={757} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(19)} />
             </div>
 
-            <video width="3840" height="2160" muted loop playsInline webkit-playsinline preload="auto" className='fade-in' onClick={() => openMedia(20)}>
+            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(20)}>
                 <source src={`${cdn}/vids/furniture_preview.mp4`} type="video/mp4" />
             </video>
 
