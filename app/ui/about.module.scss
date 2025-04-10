@@ -1,0 +1,48 @@
+.aboutPage {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 45px;
+    font-family: "DJR", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+
+    .guy {
+        max-width: min(calc(100vw - 16px), 475px);
+    }
+}
+
+.rightColumn {
+    max-width: 580px;
+}
+
+.logos {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 1024px) {
+    .aboutPage {
+        margin-top: 140px !important;
+    }
+}
+
+@media (min-width: 500px) {
+    .aboutPage {
+        margin: 0 auto;
+        width: 85%;
+    }
+}
+
+@media (min-width: 792px) {
+    .aboutPage {
+        margin: 84px 11.516% 80px 11.938%;
+        width: 76.54%;
+    }
+}
+
+@media (max-width: 1332px) {
+    .logos {
+        margin-top: 20px;
+    }
+}

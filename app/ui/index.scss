@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeueMedium.otf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeueBold.otf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeueRoman.otf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "DJR";
+    src: url("/fonts/DjrExtraBold.ttf") format("truetype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "DJR";
+    src: url("/fonts/DjrBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "DJR";
+    src: url("/fonts/DjrRegular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DJRText";
+    src: url("/fonts/FormaDJRTextExtraBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+.helveticaNeue {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.djr {
+    font-family: "DJR", Helvetica, Arial, sans-serif;
+}
+
+.fade-in {
+    opacity: 0;
+    scale: 0.95;
+    transition: opacity .7s ease,
+                scale .7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    scale: 1;
+}
+
+.scaleOnHover {
+    transition: scale .2s ease-in-out;
+    &:hover {
+        scale: 1.2;
+    }
+}
+
+.scaleOnHover5 {
+    transition: scale .2s ease-in-out;
+    &:hover {
+        scale: 1.05;
+    }
+}

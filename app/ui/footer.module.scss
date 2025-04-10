@@ -1,0 +1,44 @@
+.footer {
+    margin: 102px auto 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .text {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .social {
+        display: flex;
+        gap: 8.5px;
+    }    
+}
+
+.buttonUp {
+    margin-top: -10px;
+    margin-right: -5px;
+    margin-left: -23px;
+    padding: 10px;
+}
+
+@media (min-width: 500px) {
+    .footer {
+        margin: 102px auto 30px;
+        width: 85%;
+    }
+}
+
+@media (min-width: 792px) {
+    .footer {
+        margin: 102px 11.516% 30px 11.938%;
+        width: 76.54%;
+    }
+}
+
+@media (min-width: 792px) {
+}

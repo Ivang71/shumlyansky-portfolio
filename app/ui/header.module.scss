@@ -1,0 +1,122 @@
+.header {
+    z-index: 800;
+    margin: 0 8.01% 0 8.01%;
+    padding: 26px 0 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 17px;
+    font-weight: 800;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+
+    .logo {
+        margin-top: -7px;
+    }
+}
+
+.mobileHeader {
+    margin-left: 11%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        margin: 7px 0 0 0;
+    }
+}
+
+.nav {
+    padding-top: 9px;
+    display: flex;
+    gap: 25px;
+    font-family: "DJRText";
+}
+
+.social {
+    display: flex;
+    gap: 8.5px;
+}
+
+@mixin burgerLine {
+    content: "";
+    position: absolute;
+    left: 20px;
+    background: #000;
+    height: 3px;
+    width: 30px;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+    transform-origin: 0% 50%;
+}
+
+.burger {
+    position: relative;
+    padding: 20px;
+    margin-right: 9vw;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+
+    &::before {
+        @include burgerLine();
+        top: 30%;
+    }
+
+    &::after {
+        @include burgerLine();
+        top: 60%;
+    }
+}
+
+.open {
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    .middle {
+        transform: scaleX(0);
+    }
+}
+
+.middle {
+    @include burgerLine();
+    top: 45%;
+    transform-origin: 50% 50%;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: -13vw;
+        padding: 0;
+        width: 110vw;
+        background: #fff;
+    }
+
+    .header {
+        top: 0;
+        right: 0;
+        left: -13vw;
+        width: 110vw;
+        background: #fff;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        max-width: 87%;
+    }
+}
+
+@media (min-width: 792px) {}

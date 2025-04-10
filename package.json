@@ -1,0 +1,32 @@
+{
+    "name": "shumlyansky_portfolio",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@gsap/react": "^2",
+        "@vercel/speed-insights": "^1.0.12",
+        "gsap": "^3",
+        "next": "14",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-loading-skeleton": "^3",
+        "react-photoswipe-gallery": "^3.0.2",
+        "sass": "^1.79.3",
+        "sharp": "^0.33.5",
+        "swr": "^2",
+        "yet-another-react-lightbox": "^3.21.6"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "typescript": "^5"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}
