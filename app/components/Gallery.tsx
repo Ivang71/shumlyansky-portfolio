@@ -40,71 +40,71 @@ export const Gallery = () => {
     return (
         <div className={s.gallery}>
             <div className={s.firstRow}>
-                <Image src={`/pics/frame_preview.avif`} alt="" priority width={630} height={630} className='fade-in' onClick={() => openMedia(0)} />
-                <Image src={`/pics/ring1_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(1)} />
+                <Image src={`${cdn}/pics/frame_preview.avif`} alt="" priority width={630} height={630} className='fade-in' onClick={() => openMedia(0)} />
+                <Image src={`${cdn}/pics/ring1_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(1)} />
                 <video width="475" height="475" muted autoPlay loop playsInline webkit-playsinline preload="auto" className='fade-in' onClick={() => openMedia(2)}>
-                    <source src={`/vids/milk_preview.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/milk_preview.mp4`} type="video/mp4" />
                 </video>
             </div>
 
             <div className={s.secondRow}>
-                <Image src={`/pics/ring2_preview.avif`} alt="" priority width={626} height={719} className={`${s.balloonsImg} fade-in`} onClick={() => openMedia(3)} />
-                <Image src={`/pics/balloons_preview.avif`} alt="" priority width={630} height={630} className={`${s.balloonsImg} fade-in`} onClick={() => openMedia(4)} />
-                <Image src={`/pics/ring3_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(5)} />
+                <Image src={`${cdn}/pics/ring2_preview.avif`} alt="" priority width={626} height={719} className={`${s.balloonsImg} fade-in`} onClick={() => openMedia(3)} />
+                <Image src={`${cdn}/pics/balloons_preview.avif`} alt="" priority width={630} height={630} className={`${s.balloonsImg} fade-in`} onClick={() => openMedia(4)} />
+                <Image src={`${cdn}/pics/ring3_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(5)} />
             </div>
 
             <video width="1146" height="814" muted loop playsInline webkit-playsinline preload="auto" className={`${s.canVid} fade-in`} onClick={() => openMedia(6)}>
-                <source src={`/vids/can_preview.mp4`} type="video/mp4" />
+                <source src={`${cdn}/vids/can_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.thirdRow}>
                 <video width="313" height="391" muted loop playsInline webkit-playsinline preload="auto" className={`${s.pucksVid} fade-in`} onClick={() => openMedia(7)}>
-                    <source src={`/vids/pucks_preview.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/pucks_preview.mp4`} type="video/mp4" />
                 </video>
                 <video width="552" height="714" muted loop playsInline webkit-playsinline preload="auto" className={`${s.mouseVid} fade-in`} onClick={() => openMedia(8)}>
-                    <source src={`/vids/mouse_preview.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/mouse_preview.mp4`} type="video/mp4" />
                 </video>
                 <video width="313" height="313" muted loop playsInline webkit-playsinline preload="auto" className={`${s.coolinartVid} fade-in`} onClick={() => openMedia(9)}>
-                    <source src={`/vids/coolinart_preview.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/coolinart_preview.mp4`} type="video/mp4" />
                 </video>
             </div>
 
             <video width="1446" height="606" muted loop playsInline webkit-playsinline preload="auto" className={`${s.joisVid} fade-in`} onClick={() => openMedia(10)}>
-                <source src={`/vids/jois_preview.mp4`} type="video/mp4" />
+                <source src={`${cdn}/vids/jois_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.seventhRow}>
                 <video width="442" height="628" muted loop playsInline webkit-playsinline preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(11)}>
-                    <source src={`/vids/burberry_preview.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/burberry_preview.mp4`} type="video/mp4" />
                 </video>
                 <div className={s.burbBlock}>
-                    <Image src={`/pics/burb1.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(12)} />
-                    <Image src={`/pics/burb2.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(13)} />
-                    <Image src={`/pics/burb3.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(14)} />
-                    <Image src={`/pics/burb4.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(15)} />
+                    <Image src={`${cdn}/pics/burb1.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(12)} />
+                    <Image src={`${cdn}/pics/burb2.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(13)} />
+                    <Image src={`${cdn}/pics/burb3.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(14)} />
+                    <Image src={`${cdn}/pics/burb4.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(15)} />
                 </div>
             </div>
 
             <video width="1446" height="814" muted loop playsInline webkit-playsinline preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
-                <source src={`/vids/camera_preview.mp4`} type="video/mp4" />
+                <source src={`${cdn}/vids/camera_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.fifthRow}>
                 <video width="942" height="1177" muted loop playsInline webkit-playsinline preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
-                    <source src={`/vids/phone.mp4`} type="video/mp4" />
+                    <source src={`${cdn}/vids/phone.mp4`} type="video/mp4" />
                 </video>
-                <Image src={`/pics/flower_preview.avif`} alt="" priority={false} width={650} height={751} loading='lazy' className={`${s.flower} fade-in`} onClick={() => openMedia(18)} />
-                <Image src={`/pics/chakchak_preview.avif`} alt="" priority={false} width={650} height={757} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(19)} />
+                <Image src={`${cdn}/pics/flower_preview.avif`} alt="" priority={false} width={650} height={751} loading='lazy' className={`${s.flower} fade-in`} onClick={() => openMedia(18)} />
+                <Image src={`${cdn}/pics/chakchak_preview.avif`} alt="" priority={false} width={650} height={757} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(19)} />
             </div>
 
             <video width="3840" height="2160" muted loop playsInline webkit-playsinline preload="auto" className='fade-in' onClick={() => openMedia(20)}>
-                <source src={`/vids/furniture_preview.mp4`} type="video/mp4" />
+                <source src={`${cdn}/vids/furniture_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.ninethRow}>
-                <Image src={`/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(21)} />
-                <Image src={`/pics/raul_violet_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(22)} />
-                <Image src={`/pics/raul_pink_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
+                <Image src={`${cdn}/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(21)} />
+                <Image src={`${cdn}/pics/raul_violet_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(22)} />
+                <Image src={`${cdn}/pics/raul_pink_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
             </div>
 
             <Lightbox
