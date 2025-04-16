@@ -13,17 +13,17 @@ import { SlideFooter } from "./SlideFooter"
 
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
+    const [isSafari, setIsSafari] = useState(false)
     const windowWidth = useWindowWidth()
-
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
     // Retrieve query parameter on mount
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search)
         const media = searchParams.get('media')
         if (media) {
-        setIndex(parseInt(media))
+            setIndex(parseInt(media))
         }
+        setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     }, [])
 
     const close = () => {
