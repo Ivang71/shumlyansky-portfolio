@@ -108,7 +108,7 @@ export const Gallery = () => {
                 <Image src={`${cdn}/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(21)} />
                 <Image src={`${cdn}/pics/raul_violet_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(22)} />
                 <Image src={`${cdn}/pics/raul_pink_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
-            </div>
+            </div> 
 
             <Lightbox
                 plugins={[Video]}
