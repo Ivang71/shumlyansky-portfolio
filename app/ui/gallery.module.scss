@@ -93,13 +93,19 @@
         margin-top: 10px;
     }
 
+    .rowWithThorus {
+        margin-top: 9px;
+        display: grid;
+        grid-template-columns: 1.666fr 1fr;   
+        grid-column-gap: 12px;
+    }
 
     .fifthRow {
-        margin-top: 7.75px;
+        margin: 9px 0;
         display: grid;
-        grid-template-columns: 1.91fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: 8.39px;
-        grid-column-gap: 11.75px;
+        grid-column-gap: 12px;
     }
 
     .phoneVid {

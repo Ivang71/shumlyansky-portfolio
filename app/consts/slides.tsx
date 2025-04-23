@@ -159,7 +159,7 @@ export const slides: CustomSlide[] = [
         ...standardVideoProps,
         sources: [
             {
-                src: `${cdn}/vids/camera.mp4`,
+                src: `${cdn}/vids/cosmetics.mp4`,
                 type: "video/mp4",
             },
         ],
@@ -167,7 +167,18 @@ export const slides: CustomSlide[] = [
 
 
     {
-        width: 1536, // 17
+        width: 2800, // 17
+        height: 2100,
+        ...standardVideoProps,
+        sources: [
+            {
+                src: `${cdn}/vids/thorus.mp4`,
+                type: "video/mp4",
+            },
+        ],
+    },
+    {
+        width: 1536, // 18
         height: 1920,
         ...standardVideoProps,
         sources: [
@@ -178,21 +189,27 @@ export const slides: CustomSlide[] = [
         ],
     },
     {
-        src: `${cdn}/pics/chakchak.avif`, // 18
-        type: 'image',
-        width: 3211,
-        height: 3744,
-    },
-    {
         src: `${cdn}/pics/flower.avif`, // 19
         type: 'image',
         width: 2490,
         height: 2880,
     },
+    {
+        src: `${cdn}/pics/chakchak.avif`, // 20
+        type: 'image',
+        width: 3211,
+        height: 3744,
+    },
+    {
+        src: `${cdn}/pics/yellow.avif`, // 21
+        type: 'image',
+        width: 3211,
+        height: 3744,
+    },
 
 
     {
-        width: 3840, // 20
+        width: 3840, // 22
         height: 2160,
         ...standardVideoProps,
         sources: [
@@ -206,19 +223,19 @@ export const slides: CustomSlide[] = [
 
     
     {
-        src: `${cdn}/pics/raul_green_1.avif`, // 21
+        src: `${cdn}/pics/raul_green_1.avif`, // 23
         type: 'image',
         width: 2650,
         height: 3040,
     },
     {
-        src: `${cdn}/pics/raul_violet_1.avif`, // 22
+        src: `${cdn}/pics/raul_violet_1.avif`, // 24
         type: 'image',
         width: 2650,
         height: 3040,
     },
     {
-        src: `${cdn}/pics/raul_pink_1.avif`, // 23
+        src: `${cdn}/pics/raul_pink_1.avif`, // 25
         type: 'image',
         width: 2650,
         height: 3040,

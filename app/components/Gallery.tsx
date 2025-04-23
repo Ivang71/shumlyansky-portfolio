@@ -88,26 +88,33 @@ export const Gallery = () => {
                 </div>
             </div>
 
-            <video width="1446" height="814" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
-                <source src={`${cdn}/vids/camera_preview.mp4`} type="video/mp4" />
+            <video width="1536" height="864" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
+                <source src={`${cdn}/vids/cosmetics_preview.mp4`} type="video/mp4" />
             </video>
 
-            <div className={s.fifthRow}>
-                <video width="942" height="1177" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
+            <div className={s.rowWithThorus}>
+                <video width="1680" height="1260" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
+                    <source src={`${cdn}/vids/thorus_preview.mp4`} type="video/mp4" />
+                </video>
+                <video width="1536" height="1920" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(18)}>
                     <source src={`${cdn}/vids/phone.mp4`} type="video/mp4" />
                 </video>
-                <Image src={`${cdn}/pics/flower_preview.avif`} alt="" priority={false} width={650} height={751} loading='lazy' className={`${s.flower} fade-in`} onClick={() => openMedia(18)} />
-                <Image src={`${cdn}/pics/chakchak_preview.avif`} alt="" priority={false} width={650} height={757} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(19)} />
             </div>
 
-            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(20)}>
+            <div className={s.fifthRow}>
+                <Image src={`${cdn}/pics/flower_preview.avif`} alt="" priority={false} width={650} height={751} loading='lazy' className={`${s.flower} fade-in`} onClick={() => openMedia(19)} />
+                <Image src={`${cdn}/pics/chakchak_preview.avif`} alt="" priority={false} width={650} height={757} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(20)} />
+                <Image src={`${cdn}/pics/yellow_preview.avif`} alt="" priority={false} width={1680} height={1260} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(21)} />
+            </div>
+
+            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(22)}>
                 <source src={`${cdn}/vids/furniture_preview.mp4`} type="video/mp4" />
             </video>
 
             <div className={s.ninethRow}>
-                <Image src={`${cdn}/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(21)} />
-                <Image src={`${cdn}/pics/raul_violet_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(22)} />
-                <Image src={`${cdn}/pics/raul_pink_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
+                <Image src={`${cdn}/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
+                <Image src={`${cdn}/pics/raul_violet_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(24)} />
+                <Image src={`${cdn}/pics/raul_pink_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(25)} />
             </div> 
 
             <Lightbox
