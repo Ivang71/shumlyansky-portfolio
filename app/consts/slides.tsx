@@ -1,4 +1,5 @@
 import { CustomSlide } from "../types"
+import { t } from "../i18n"
 
 export const cdn = 'https://shumlyansky.b-cdn.net'
 
@@ -10,7 +11,8 @@ const standardVideoProps = {
     preload: 'metadata'
 }
 
-export const slides: CustomSlide[] = [
+// Function to get slides with translated texts
+export const getSlides = (): CustomSlide[] => [
     {
         src: `${cdn}/pics/frame.avif`, // 0
         type: 'image',
@@ -112,7 +114,7 @@ export const slides: CustomSlide[] = [
                 type: "video/mp4",
             },
         ],
-        text: 'Совместная работа с агентством Zephyr Lab. Имиджевое видео для ЖК "JOIS". Режиссура, монтаж, моушн – Александр Шумлянский. Ролик транслировался в рекламном блоке перед киносеансами в кинотеатре "Художественный", в Москве.',
+        text: t('jois', 'slides'),
     },
 
 
@@ -241,3 +243,6 @@ export const slides: CustomSlide[] = [
         height: 3040,
     },
 ]
+
+// For backward compatibility
+export const slides = getSlides()

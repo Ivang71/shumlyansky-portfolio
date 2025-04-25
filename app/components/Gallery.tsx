@@ -6,15 +6,19 @@ import Lightbox from "yet-another-react-lightbox"
 import Video from "yet-another-react-lightbox/plugins/video"
 import "yet-another-react-lightbox/styles.css"
 import s from '@/app/ui/gallery.module.scss'
-import { cdn, slides } from "@/app/consts/slides"
+import { cdn, getSlides } from "@/app/consts/slides"
 import { useWindowWidth } from "@/app/hooks"
 import { SlideFooter } from "./SlideFooter"
-
+import { useLanguage } from "@/app/i18n/LanguageContext"
 
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
     const [isSafari, setIsSafari] = useState(false)
     const windowWidth = useWindowWidth()
+    const { locale } = useLanguage()
+    
+    // Get slides with proper translations based on current locale
+    const slides = getSlides()
 
     // Retrieve query parameter on mount
     useEffect(() => {

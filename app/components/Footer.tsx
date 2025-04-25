@@ -5,11 +5,13 @@ import '@/app/ui/index.scss'
 import { usePathname } from 'next/navigation'
 import s from '@/app/ui/footer.module.scss'
 import { useEffect, useState } from 'react'
+import { useTranslation } from '../i18n/useTranslation'
 
 export const Footer = () => {
     const pathname = usePathname()
     const isHome = pathname === '/'
     const [fadeEls, setFadeEls] = useState<NodeListOf<Element> | null>(null)
+    const { t } = useTranslation()
 
     useEffect(() => {
         setFadeEls(document.querySelectorAll('.fade-in'))
@@ -26,7 +28,7 @@ export const Footer = () => {
     return (
         <footer className={s.footer} style={{ marginTop: isHome? '80px' : '50px' }}>
             <div className={s.text}>
-                <div>© ALEXANDER SHUMLYANSKY, {new Date().getFullYear()}</div>
+                <div>© {t('title')}, {new Date().getFullYear()}</div>
             </div>
             <div className={`${s.buttonUp} scaleOnHover`} onClick={scrollToTop} style={{ visibility: isHome ? 'visible' : 'hidden' }}>
                 <Image src="/svg/arrow_up.svg" alt="" width={26} height={14}/>

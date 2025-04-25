@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useWindowWidth } from '../hooks'
 import s from '@/app/ui/header.module.scss'
 import Link from 'next/link'
+import { useTranslation } from '../i18n/useTranslation'
 
 interface HeaderProps {
     isMobileMenuOpen: boolean
@@ -12,6 +13,8 @@ interface HeaderProps {
 
 export const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
     const windowWidth = useWindowWidth()
+    const { t } = useTranslation()
+    
     return (
         <div className={s.header}>
             {windowWidth > 1024 ? (
@@ -32,10 +35,14 @@ export const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
                             </a>
                         </div>
                         <Link href="/" className='scaleOnHover5'>
-                            <Image src="/svg/projects.svg" alt="" width={89} height={29} />
+                            <span title={t('nav.works')}>
+                                <Image src="/svg/projects.svg" alt={t('nav.works')} width={89} height={29} />
+                            </span>
                         </Link>
                         <Link href="/about" className='scaleOnHover5'>
-                            <Image src="/svg/about.svg" alt="" width={59} height={29} />
+                            <span title={t('nav.about')}>
+                                <Image src="/svg/about.svg" alt={t('nav.about')} width={59} height={29} />
+                            </span>
                         </Link>
                     </div>
                 </>

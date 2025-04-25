@@ -1,0 +1,29 @@
+{
+  "title": "Alexander Shumlyansky",
+  "description": "3D Modeling, Rendering, Texturing, Animation, Product visualization",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "3D Artist & Visualizer",
+    "paragraph1": "3D & Motion designer specializing in creating engaging renders and motion videos.",
+    "paragraph2": "In my work, I strive to find and convey the unique atmosphere of a brand, staying in close contact with you and your vision of the product.",
+    "paragraph3": "Modeling, animations, simulations, product posts, full CG videos.",
+    "paragraph4": "I'd be happy to discuss your ideas and various collaboration options!",
+    "email": "e-mail: shumlyanskyo@gmail.com",
+    "telegram": "telegram: shumlyansky"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "social": "Social"
+  },
+  "portfolio": {
+    "view": "View project",
+    "all": "All works"
+  }
+} 
