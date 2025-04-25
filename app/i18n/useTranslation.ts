@@ -18,7 +18,7 @@ const translations = {
 }
 
 export const useTranslation = (namespace: string = 'common') => {
-  const { locale } = useLanguage()
+  const { locale, isLoaded } = useLanguage()
   
   const t = (key: string): string => {
     const keys = key.split('.')
@@ -32,5 +32,5 @@ export const useTranslation = (namespace: string = 'common') => {
     return translation || key
   }
   
-  return { t, locale }
+  return { t, locale, isLoaded }
 } 

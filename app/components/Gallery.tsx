@@ -9,16 +9,16 @@ import s from '@/app/ui/gallery.module.scss'
 import { cdn, getSlides } from "@/app/consts/slides"
 import { useWindowWidth } from "@/app/hooks"
 import { SlideFooter } from "./SlideFooter"
-import { useLanguage } from "@/app/i18n/LanguageContext"
+import { useTranslation } from "@/app/i18n/useTranslation"
 
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
     const [isSafari, setIsSafari] = useState(false)
     const windowWidth = useWindowWidth()
-    const { locale } = useLanguage()
+    const { locale, t } = useTranslation('slides')
     
     // Get slides with proper translations based on current locale
-    const slides = getSlides()
+    const slides = getSlides((key, namespace) => t(key))
 
     // Retrieve query parameter on mount
     useEffect(() => {

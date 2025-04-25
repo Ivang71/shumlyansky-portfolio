@@ -13,7 +13,11 @@ const rubik = Rubik({
 })
 
 export default function AboutPage() {
-    const { t } = useTranslation()
+    const { t, isLoaded } = useTranslation()
+    
+    if (!isLoaded) {
+        return <div className={s.aboutPage}></div>
+    }
     
     return (
         <>

@@ -1,5 +1,4 @@
 import { CustomSlide } from "../types"
-import { t } from "../i18n"
 
 export const cdn = 'https://shumlyansky.b-cdn.net'
 
@@ -12,7 +11,10 @@ const standardVideoProps = {
 }
 
 // Function to get slides with translated texts
-export const getSlides = (): CustomSlide[] => [
+export const getSlides = (translate?: (key: string, namespace: string) => string): CustomSlide[] => {
+    const t = translate || ((key, namespace) => key)
+    
+    return [
     {
         src: `${cdn}/pics/frame.avif`, // 0
         type: 'image',
@@ -243,6 +245,7 @@ export const getSlides = (): CustomSlide[] => [
         height: 3040,
     },
 ]
+}
 
 // For backward compatibility
 export const slides = getSlides()

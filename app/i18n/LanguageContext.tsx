@@ -8,12 +8,14 @@ type Locale = 'en' | 'ru'
 interface LanguageContextType {
   locale: Locale
   setLocale: (locale: Locale) => void
+  isLoaded: boolean
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocaleState] = useState<Locale>('en')
+  const [isLoaded, setIsLoaded] = useState(false)
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)
@@ -25,10 +27,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const detectedLocale = getLocale()
     setLocaleState(detectedLocale)
     document.documentElement.lang = detectedLocale
+    setIsLoaded(true)
   }, [])
 
   return (
-    <LanguageContext.Provider value={{ locale, setLocale }}>
+    <LanguageContext.Provider value={{ locale, setLocale, isLoaded }}>
       {children}
     </LanguageContext.Provider>
   )
