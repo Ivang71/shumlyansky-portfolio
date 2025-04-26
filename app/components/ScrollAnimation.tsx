@@ -25,14 +25,19 @@ export const ScrollAnimation = () => {
 
         fadeElements.forEach((el) => observer.observe(el))
 
+        // Update ScrollTrigger when lenis scrolls
+        const updateScrollTrigger = () => {
+            ScrollTrigger.update()
+        }
+
         if (lenis) {
-            lenis.on('scroll', ScrollTrigger.update)
+            lenis.on('scroll', updateScrollTrigger)
         }
 
         return () => {
             fadeElements.forEach((el) => observer.unobserve(el))
             if (lenis) {
-                lenis.off('scroll')
+                lenis.off('scroll', updateScrollTrigger)
             }
         }
     }, [lenis])
