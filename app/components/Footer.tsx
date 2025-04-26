@@ -22,13 +22,13 @@ export const Footer = () => {
     const scrollToTop = () => {
         if (lenis) {
             lenis.scrollTo(0, { duration: 1.2 })
-            setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
+            // setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
         } else {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth',
             })
-            setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
+            // setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
         }
     }
 

@@ -10,6 +10,7 @@ import { cdn, getSlides } from "@/app/consts/slides"
 import { useWindowWidth } from "@/app/hooks"
 import { SlideFooter } from "./SlideFooter"
 import { useTranslation } from "@/app/i18n/useTranslation"
+import { LazyVideo } from './LazyVideo'
 
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
@@ -40,18 +41,19 @@ export const Gallery = () => {
         window.history.replaceState({}, '', `?media=${index}`)
     }
 
-    useEffect(() => {
-        document.querySelectorAll('video').forEach((v) => { v.preload = "auto"; v.autoplay = true })
-    }, [])
-
     return (
         <div className={s.gallery}>
             <div className={s.firstRow}>
                 <Image src={`${cdn}/pics/frame_preview.avif`} alt="" priority width={630} height={630} className='fade-in' onClick={() => openMedia(0)} />
                 <Image src={`${cdn}/pics/ring1_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(1)} />
-                <video width="475" height="475" muted autoPlay loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(2)}>
-                    <source src={`${cdn}/vids/milk_preview.mp4`} type="video/mp4" />
-                </video>
+                <LazyVideo 
+                    src={`${cdn}/vids/milk_preview.mp4`} 
+                    w={475} 
+                    h={475} 
+                    className='fade-in' 
+                    onClick={() => openMedia(2)}
+                    controls={isSafari}
+                />
             </div>
 
             <div className={s.secondRow}>
@@ -60,30 +62,60 @@ export const Gallery = () => {
                 <Image src={`${cdn}/pics/ring3_preview.avif`} alt="" priority width={626} height={719} className='fade-in' onClick={() => openMedia(5)} />
             </div>
 
-            <video width="1146" height="814" muted loop playsInline controls={isSafari} preload="auto" className={`${s.canVid} fade-in`} onClick={() => openMedia(6)}>
-                <source src={`${cdn}/vids/can_preview.mp4`} type="video/mp4" />
-            </video>
+            <LazyVideo 
+                src={`${cdn}/vids/can_preview.mp4`} 
+                w={1146} 
+                h={814} 
+                className={`${s.canVid} fade-in`} 
+                onClick={() => openMedia(6)}
+                controls={isSafari}
+            />
 
             <div className={s.thirdRow}>
-                <video width="313" height="391" muted loop playsInline controls={isSafari} preload="auto" className={`${s.pucksVid} fade-in`} onClick={() => openMedia(7)}>
-                    <source src={`${cdn}/vids/pucks_preview.mp4`} type="video/mp4" />
-                </video>
-                <video width="552" height="714" muted loop playsInline controls={isSafari} preload="auto" className={`${s.mouseVid} fade-in`} onClick={() => openMedia(8)}>
-                    <source src={`${cdn}/vids/mouse_preview.mp4`} type="video/mp4" />
-                </video>
-                <video width="313" height="313" muted loop playsInline controls={isSafari} preload="auto" className={`${s.coolinartVid} fade-in`} onClick={() => openMedia(9)}>
-                    <source src={`${cdn}/vids/coolinart_preview.mp4`} type="video/mp4" />
-                </video>
+                <LazyVideo 
+                    src={`${cdn}/vids/pucks_preview.mp4`} 
+                    w={313} 
+                    h={391} 
+                    className={`${s.pucksVid} fade-in`} 
+                    onClick={() => openMedia(7)}
+                    controls={isSafari}
+                />
+                <LazyVideo 
+                    src={`${cdn}/vids/mouse_preview.mp4`} 
+                    w={552} 
+                    h={714} 
+                    className={`${s.mouseVid} fade-in`} 
+                    onClick={() => openMedia(8)}
+                    controls={isSafari}
+                />
+                <LazyVideo 
+                    src={`${cdn}/vids/coolinart_preview.mp4`} 
+                    w={313} 
+                    h={313} 
+                    className={`${s.coolinartVid} fade-in`} 
+                    onClick={() => openMedia(9)}
+                    controls={isSafari}
+                />
             </div>
 
-            <video width="1446" height="606" muted loop playsInline controls={isSafari} preload="auto" className={`${s.joisVid} fade-in`} onClick={() => openMedia(10)}>
-                <source src={`${cdn}/vids/jois_preview.mp4`} type="video/mp4" />
-            </video>
+            <LazyVideo 
+                src={`${cdn}/vids/jois_preview.mp4`} 
+                w={1446} 
+                h={606} 
+                className={`${s.joisVid} fade-in`} 
+                onClick={() => openMedia(10)}
+                controls={isSafari}
+            />
 
             <div className={s.seventhRow}>
-                <video width="442" height="628" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(11)}>
-                    <source src={`${cdn}/vids/burberry_preview.mp4`} type="video/mp4" />
-                </video>
+                <LazyVideo 
+                    src={`${cdn}/vids/burberry_preview.mp4`} 
+                    w={442} 
+                    h={628} 
+                    className={`${s.phoneVid} fade-in`} 
+                    onClick={() => openMedia(11)}
+                    controls={isSafari}
+                />
                 <div className={s.burbBlock}>
                     <Image src={`${cdn}/pics/burb1.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(12)} />
                     <Image src={`${cdn}/pics/burb2.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(13)} />
@@ -92,17 +124,32 @@ export const Gallery = () => {
                 </div>
             </div>
 
-            <video width="1536" height="864" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cosmeticsVid} fade-in`} onClick={() => openMedia(16)}>
-                <source src={`${cdn}/vids/cosmetics_preview.mp4`} type="video/mp4" />
-            </video>
+            <LazyVideo 
+                src={`${cdn}/vids/cosmetics_preview.mp4`} 
+                w={1536} 
+                h={864} 
+                className={`${s.cosmeticsVid} fade-in`} 
+                onClick={() => openMedia(16)}
+                controls={isSafari}
+            />
 
             <div className={s.rowWithThorus}>
-                <video width="1680" height="1260" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(17)}>
-                    <source src={`${cdn}/vids/thorus_preview.mp4`} type="video/mp4" />
-                </video>
-                <video width="1536" height="1920" muted loop playsInline controls={isSafari} preload="auto" className={`${s.phoneVid} fade-in`} onClick={() => openMedia(18)}>
-                    <source src={`${cdn}/vids/phone.mp4`} type="video/mp4" />
-                </video>
+                <LazyVideo 
+                    src={`${cdn}/vids/thorus_preview.mp4`} 
+                    w={1680} 
+                    h={1260} 
+                    className={`${s.phoneVid} fade-in`} 
+                    onClick={() => openMedia(17)}
+                    controls={isSafari}
+                />
+                <LazyVideo 
+                    src={`${cdn}/vids/phone.mp4`} 
+                    w={1536} 
+                    h={1920} 
+                    className={`${s.phoneVid} fade-in`} 
+                    onClick={() => openMedia(18)}
+                    controls={isSafari}
+                />
             </div>
 
             <div className={s.fifthRow}>
@@ -111,9 +158,14 @@ export const Gallery = () => {
                 <Image src={`${cdn}/pics/yellow_preview.avif`} alt="" priority={false} width={1680} height={1260} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(21)} />
             </div>
 
-            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className={`${s.furnitureVid} fade-in`} onClick={() => openMedia(22)}>
-                <source src={`${cdn}/vids/furniture_preview.mp4`} type="video/mp4" />
-            </video>
+            <LazyVideo 
+                src={`${cdn}/vids/furniture_preview.mp4`} 
+                w={3840} 
+                h={2160} 
+                className={`${s.furnitureVid} fade-in`} 
+                onClick={() => openMedia(22)}
+                controls={isSafari}
+            />
 
             <div className={s.ninethRow}>
                 <Image src={`${cdn}/pics/raul_green_1.avif`} alt="" priority={false} width={2650} height={3040} loading='lazy' className='fade-in' onClick={() => openMedia(23)} />
