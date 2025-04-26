@@ -1,18 +1,22 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useScroll } from './ScrollProvider'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export const ScrollAnimation = () => {
+    const { lenis } = useScroll()
+
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        
         const fadeElements = document.querySelectorAll('.fade-in')
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible')
-                } else {
-                    // Optional: remove 'visible' class if you want the fade-out effect
-                    // entry.target.classList.remove('visible')
                 }
             })
         }, {
@@ -21,11 +25,17 @@ export const ScrollAnimation = () => {
 
         fadeElements.forEach((el) => observer.observe(el))
 
-        // Cleanup function to disconnect the observer when the component unmounts
+        if (lenis) {
+            lenis.on('scroll', ScrollTrigger.update)
+        }
+
         return () => {
             fadeElements.forEach((el) => observer.unobserve(el))
+            if (lenis) {
+                lenis.off('scroll')
+            }
         }
-    }, [])
+    }, [lenis])
 
     return (
         <></>

@@ -6,23 +6,30 @@ import { usePathname } from 'next/navigation'
 import s from '@/app/ui/footer.module.scss'
 import { useEffect, useState } from 'react'
 import { useTranslation } from '../i18n/useTranslation'
+import { useScroll } from './ScrollProvider'
 
 export const Footer = () => {
     const pathname = usePathname()
     const isHome = pathname === '/'
     const [fadeEls, setFadeEls] = useState<NodeListOf<Element> | null>(null)
     const { t } = useTranslation()
+    const { lenis } = useScroll()
 
     useEffect(() => {
         setFadeEls(document.querySelectorAll('.fade-in'))
     }, [])
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        })
-        setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
+        if (lenis) {
+            lenis.scrollTo(0, { duration: 1.2 })
+            setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+            setTimeout(() => fadeEls?.forEach(el => el.classList.remove('visible')), 400)
+        }
     }
 
     return (

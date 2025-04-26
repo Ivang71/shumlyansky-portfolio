@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@gsap/react": "^2",
+        "@studio-freight/lenis": "^1.0.42",
         "@vercel/speed-insights": "^1.0.12",
         "gsap": "^3",
         "next": "14",
