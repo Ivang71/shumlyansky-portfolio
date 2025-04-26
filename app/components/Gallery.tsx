@@ -92,7 +92,7 @@ export const Gallery = () => {
                 </div>
             </div>
 
-            <video width="1536" height="864" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cameraVid} fade-in`} onClick={() => openMedia(16)}>
+            <video width="1536" height="864" muted loop playsInline controls={isSafari} preload="auto" className={`${s.cosmeticsVid} fade-in`} onClick={() => openMedia(16)}>
                 <source src={`${cdn}/vids/cosmetics_preview.mp4`} type="video/mp4" />
             </video>
 
@@ -111,7 +111,7 @@ export const Gallery = () => {
                 <Image src={`${cdn}/pics/yellow_preview.avif`} alt="" priority={false} width={1680} height={1260} loading='lazy' className={`${s.chakchak} fade-in`} onClick={() => openMedia(21)} />
             </div>
 
-            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className='fade-in' onClick={() => openMedia(22)}>
+            <video width="3840" height="2160" muted loop playsInline controls={isSafari} preload="auto" className={`${s.furnitureVid} fade-in`} onClick={() => openMedia(22)}>
                 <source src={`${cdn}/vids/furniture_preview.mp4`} type="video/mp4" />
             </video>
 

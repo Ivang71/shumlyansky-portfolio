@@ -29,6 +29,7 @@
 
     .firstRow {
         margin-top: 84px;
+        min-height: 327.2px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -55,8 +56,9 @@
         align-self: end;
     }
 
-    .cameraVid {
+    .cosmeticsVid {
         position: relative;
+        min-height: 495px;
         margin-top: 8.39px;
     }
 
@@ -70,6 +72,7 @@
 
     .thirdRow {
         margin-top: 5px;
+        min-height: 719.17px;
         display: grid;
         grid-template-columns: 1fr 1.768fr;
         gap: 8.39px;
@@ -91,10 +94,12 @@
 
     .joisVid {
         margin-top: 10px;
+        min-height: 368px;
     }
 
     .rowWithThorus {
         margin-top: 9px;
+        min-height: 409px;
         display: grid;
         grid-template-columns: 1.666fr 1fr;   
         grid-column-gap: 12px;
@@ -102,10 +107,15 @@
 
     .fifthRow {
         margin: 9px 0;
+        min-height: 332px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: 8.39px;
         grid-column-gap: 12px;
+    }
+
+    .furnitureVid {
+        min-height: 495px;
     }
 
     .phoneVid {
@@ -114,6 +124,7 @@
 
     .canVid {
         margin-top: 9px;
+        min-height: 495px;
         width: 100%;
     }
 
@@ -133,6 +144,7 @@
 
     .seventhRow {
         margin-top: 5.75px;
+        min-height: 625px;
         display: grid;
         grid-template-columns: 0.9976fr 1fr;
         gap: 7px;
@@ -153,6 +165,7 @@
 
     .ninethRow {
         margin: 5px 0;
+        min-height: 337.52px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 13px;
