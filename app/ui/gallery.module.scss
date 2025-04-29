@@ -15,6 +15,37 @@
     .gallery img, .gallery video {
         width: 100%;
     }
+    .secondRow {
+        margin-top: 5px;
+    }
+    .pucksVid {
+        margin-top: 5px;
+    }
+    .mouseVid {
+        margin-top: 5px;
+    }
+    .coolinartVid {
+        margin-top: 5px;
+    }
+    .joisVid {
+        margin-top: 5px;
+    }
+    .phoneVid {
+        margin-top: 5px;
+    }
+    .burbBlock {
+        margin-top: 5px;
+    }
+    .rowWithThorus {
+        margin-top: 5px;
+    }
+    .flower {
+        margin-top: 5px;
+    }
+    .ninethRow {
+        margin-top: 5px;
+    }
+    
 }
 
 @media (min-width: 792px) {
@@ -188,6 +219,12 @@
 }
 
 @media (min-width: 1920px) {}
+
+@media (max-width: 1061px) {
+    .gallery * {
+        min-height: 0;
+    }
+}
 
 .slideFooter {
     width: calc(100% - 39px);
