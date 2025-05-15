@@ -1,3 +1,7 @@
+.gallery {
+    --gap: 7px;
+}
+
 @media (max-width: 1024px) {
     .gallery {
         margin-top: 140px !important;
@@ -16,34 +20,34 @@
         width: 100%;
     }
     .secondRow {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .pucksVid {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .mouseVid {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .coolinartVid {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .joisVid {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .phoneVid {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .burbBlock {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .rowWithThorus {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .flower {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     .ninethRow {
-        margin-top: 5px;
+        margin-top: var(--gap);
     }
     
 }
@@ -65,7 +69,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 12px;
+        grid-column-gap: var(--gap);
     }
 
     .firstRow img,
@@ -74,13 +78,13 @@
     }
 
     .secondRow {
-        margin-top: -3.9%;
+        margin-top: -3.6%;
         min-height: 291.21px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 12px;
+        grid-column-gap: var(--gap);
         align-items: end;
     }
 
@@ -103,11 +107,11 @@
 
 
     .thirdRow {
-        margin-top: 5px;
+        margin-top: var(--gap);
         min-height: 644.18px;
         display: grid;
         grid-template-columns: 1fr 1.768fr;
-        gap: 8.39px;
+        gap: var(--gap);
     }
 
     .pucksVid,
@@ -125,25 +129,25 @@
 
 
     .joisVid {
-        margin-top: 10px;
+        margin-top: var(--gap);
         min-height: 334.06px;
     }
 
     .rowWithThorus {
-        margin-top: 9px;
+        margin-top: var(--gap);
         min-height: 363.82px;
         display: grid;
         grid-template-columns: 1.666fr 1fr;   
-        grid-column-gap: 12px;
+        grid-column-gap: var(--gap);
     }
 
     .fifthRow {
-        margin: 9px 0;
+        margin: var(--gap) 0;
         min-height: 296.83px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 8.39px;
-        grid-column-gap: 12px;
+        grid-row-gap: var(--gap);
+        grid-column-gap: var(--gap);
     }
 
     .furnitureVid {
@@ -155,7 +159,7 @@
     }
 
     .canVid {
-        margin-top: 9px;
+        margin-top: var(--gap);
         min-height: 448.69px;
         width: 100%;
     }
@@ -175,32 +179,32 @@
 
 
     .seventhRow {
-        margin-top: 5.75px;
+        margin-top: var(--gap);
         min-height: 556.96px;
         display: grid;
         grid-template-columns: 0.9976fr 1fr;
-        gap: 7px;
+        gap: var(--gap);
     }
 
     .burbBlock {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: inherit;
+        gap: var(--gap);
     }
 
     
     .suitcase {
-        margin-top: 10px;
+        margin-top: var(--gap);
     }
 
 
     .ninethRow {
-        margin: 5px 0;
+        margin: var(--gap) 0;
         min-height: 301.61px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 13px;
+        gap: var(--gap);
     }
 
     .customGalleryNav,
