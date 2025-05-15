@@ -1,5 +1,5 @@
 .gallery {
-    --gap: 7px;
+    --ggap: 7px;
 }
 
 @media (max-width: 1024px) {
@@ -20,34 +20,34 @@
         width: 100%;
     }
     .secondRow {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .pucksVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .mouseVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .coolinartVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .joisVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .phoneVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .burbBlock {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .rowWithThorus {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .flower {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     .ninethRow {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
     
 }
@@ -69,7 +69,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: var(--gap);
+        grid-column-gap: var(--ggap);
     }
 
     .firstRow img,
@@ -84,7 +84,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: var(--gap);
+        grid-column-gap: var(--ggap);
         align-items: end;
     }
 
@@ -95,7 +95,7 @@
     .cosmeticsVid {
         position: relative;
         min-height: 448.69px;
-        margin-top: 8.39px;
+        margin-top: var(--ggap);
     }
 
     .cameraSound {
@@ -107,11 +107,11 @@
 
 
     .thirdRow {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
         min-height: 644.18px;
         display: grid;
         grid-template-columns: 1fr 1.768fr;
-        gap: var(--gap);
+        gap: var(--ggap);
     }
 
     .pucksVid,
@@ -129,25 +129,25 @@
 
 
     .joisVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
         min-height: 334.06px;
     }
 
     .rowWithThorus {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
         min-height: 363.82px;
         display: grid;
         grid-template-columns: 1.666fr 1fr;   
-        grid-column-gap: var(--gap);
+        grid-column-gap: var(--ggap);
     }
 
     .fifthRow {
-        margin: var(--gap) 0;
+        margin: var(--ggap) 0;
         min-height: 296.83px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: var(--gap);
-        grid-column-gap: var(--gap);
+        grid-row-gap: var(--ggap);
+        grid-column-gap: var(--ggap);
     }
 
     .furnitureVid {
@@ -159,7 +159,7 @@
     }
 
     .canVid {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
         min-height: 448.69px;
         width: 100%;
     }
@@ -179,32 +179,32 @@
 
 
     .seventhRow {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
         min-height: 556.96px;
         display: grid;
         grid-template-columns: 0.9976fr 1fr;
-        gap: var(--gap);
+        gap: var(--ggap);
     }
 
     .burbBlock {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: var(--gap);
+        gap: var(--ggap);
     }
 
     
     .suitcase {
-        margin-top: var(--gap);
+        margin-top: var(--ggap);
     }
 
 
     .ninethRow {
-        margin: var(--gap) 0;
+        margin: var(--ggap) 0;
         min-height: 301.61px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--gap);
+        gap: var(--ggap);
     }
 
     .customGalleryNav,
