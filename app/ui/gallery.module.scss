@@ -20,7 +20,7 @@
         width: 100%;
     }
     .secondRow {
-        margin-top: var(--ggap);
+        margin-top: -3.2vw;
     }
     .pucksVid {
         margin-top: var(--ggap);
@@ -78,7 +78,7 @@
     }
 
     .secondRow {
-        margin-top: -3.6%;
+        margin-top: -3.2vw;
         min-height: 291.21px;
         width: 100%;
         display: grid;
@@ -183,7 +183,7 @@
         min-height: 556.96px;
         display: grid;
         grid-template-columns: 0.9976fr 1fr;
-        gap: var(--ggap);
+        grid-column-gap: var(--ggap);
     }
 
     .burbBlock {
