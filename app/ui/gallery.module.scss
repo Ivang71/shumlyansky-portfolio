@@ -2,6 +2,15 @@
     --ggap: 7px;
 }
 
+.gallery video::-webkit-media-controls,
+.gallery video::-webkit-media-controls-enclosure,
+.gallery video::-webkit-media-controls-panel,
+.gallery video::-webkit-media-controls-play-button,
+.gallery video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
 @media (max-width: 1024px) {
     .gallery {
         margin-top: 140px !important;
