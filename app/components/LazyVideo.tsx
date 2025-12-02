@@ -55,8 +55,10 @@ export const LazyVideo = ({
       width={w}
       height={h}
       muted
+      defaultMuted
       loop
       playsInline
+      autoPlay
       preload="metadata"
       poster={poster}
       className={className}

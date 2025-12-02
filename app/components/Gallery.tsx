@@ -14,7 +14,6 @@ import { LazyVideo } from './LazyVideo'
 
 export const Gallery = () => {
     const [index, setIndex] = useState<number>(-1)
-    const [isSafari, setIsSafari] = useState(false)
     const windowWidth = useWindowWidth()
     const { locale, t } = useTranslation('slides')
     
@@ -25,10 +24,7 @@ export const Gallery = () => {
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search)
         const media = searchParams.get('media')
-        if (media) {
-            setIndex(parseInt(media))
-        }
-        setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+        if (media) setIndex(parseInt(media))
     }, [])
 
     const close = () => {
@@ -52,7 +48,6 @@ export const Gallery = () => {
                     h={475} 
                     className='fade-in' 
                     onClick={() => openMedia(2)}
-                    controls={isSafari}
                 />
             </div>
 
@@ -68,7 +63,6 @@ export const Gallery = () => {
                 h={814} 
                 className={`${s.canVid} fade-in`} 
                 onClick={() => openMedia(6)}
-                controls={isSafari}
             />
 
             <div className={s.thirdRow}>
@@ -78,7 +72,6 @@ export const Gallery = () => {
                     h={391} 
                     className={`${s.pucksVid} fade-in`} 
                     onClick={() => openMedia(7)}
-                    controls={isSafari}
                 />
                 <LazyVideo 
                     src={`${cdn}/vids/mouse_preview.mp4`} 
@@ -86,7 +79,6 @@ export const Gallery = () => {
                     h={714} 
                     className={`${s.mouseVid} fade-in`} 
                     onClick={() => openMedia(8)}
-                    controls={isSafari}
                 />
                 <LazyVideo 
                     src={`${cdn}/vids/coolinart_preview.mp4`} 
@@ -94,7 +86,6 @@ export const Gallery = () => {
                     h={313} 
                     className={`${s.coolinartVid} fade-in`} 
                     onClick={() => openMedia(9)}
-                    controls={isSafari}
                 />
             </div>
 
@@ -104,7 +95,6 @@ export const Gallery = () => {
                 h={606} 
                 className={`${s.joisVid} fade-in`} 
                 onClick={() => openMedia(10)}
-                controls={isSafari}
             />
 
             <div className={s.seventhRow}>
@@ -114,7 +104,6 @@ export const Gallery = () => {
                     h={628} 
                     className={`${s.phoneVid} fade-in`} 
                     onClick={() => openMedia(11)}
-                    controls={isSafari}
                 />
                 <div className={s.burbBlock}>
                     <Image src={`${cdn}/pics/burb1.avif`} alt="" priority={false} width={604} height={859} loading='lazy' className='fade-in' onClick={() => openMedia(12)} />
@@ -130,7 +119,6 @@ export const Gallery = () => {
                 h={864} 
                 className={`${s.cosmeticsVid} fade-in`} 
                 onClick={() => openMedia(16)}
-                controls={isSafari}
             />
 
             <div className={s.rowWithThorus}>
@@ -140,7 +128,6 @@ export const Gallery = () => {
                     h={1260} 
                     className={`${s.phoneVid} fade-in`} 
                     onClick={() => openMedia(17)}
-                    controls={isSafari}
                 />
                 <LazyVideo 
                     src={`${cdn}/vids/phone.mp4`} 
@@ -148,7 +135,6 @@ export const Gallery = () => {
                     h={1920} 
                     className={`${s.phoneVid} fade-in`} 
                     onClick={() => openMedia(18)}
-                    controls={isSafari}
                 />
             </div>
 
@@ -164,7 +150,6 @@ export const Gallery = () => {
                 h={2160} 
                 className={`${s.furnitureVid} fade-in`} 
                 onClick={() => openMedia(22)}
-                controls={isSafari}
             />
 
             <div className={s.ninethRow}>
