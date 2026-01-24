@@ -5,7 +5,7 @@
         "build": "next build",
         "dev": "next dev",
         "start": "next start"
-    },
+    }, 
     "dependencies": {
         "@gsap/react": "^2",
         "@studio-freight/lenis": "^1.0.42",
